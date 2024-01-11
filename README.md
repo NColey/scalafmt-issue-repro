@@ -1,6 +1,6 @@
 # Reproduction Of scalafmt Issue [3762](https://github.com/scalameta/scalafmt/issues/3762)
 
-View `alignment.scala` and see:
+1. View `alignment.scala` and see:
 
 ```scala
 object C {
@@ -9,9 +9,15 @@ object C {
 }
 ```
 
-Run `scalafmt` (assumes `scalafmt` CLI is installed and using version `3.7.17`)
+2. View `.scalafmt.conf` and see:
 
-See `alignment.scala` reformatted to remove alignment from `extends`:
+```
+align.preset = more
+```
+
+3. Run `scalafmt` (assumes `scalafmt` CLI is installed and using version `3.7.17`)
+
+4. See `alignment.scala` reformatted to remove alignment from `extends`:
 
 ```scala
 object C {
